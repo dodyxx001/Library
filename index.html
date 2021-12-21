@@ -10,30 +10,26 @@
 <body>
     <header>
         <h1>Library</h1>
-        <button>Add Book</button>
+        <button id="add-button">Add Book</button>
     </header>
-    <content>
-        <div class="book">
-            <div class="info title">
-                <p>Title:</p>
-                <p id="title">The Hobbit</p>
-            </div>
-            <div class="info author">
-                <p>Author:</p>
-                <p id="author">J.R.R. Tolkien</p>
-            </div>
-            <div class="info pages">
-                <p>Pages:</p>
-                <p id="pages">385</p>
-            </div>
-            <div class="read">
-                <button>Read yet</button>
-            </div>
-            <div class="remove">
-                <button>Remove Book</button>
-            </div>
-        </div>
-    </content>
+
+
+    <content></content>
+
+    <div class="input-form">
+        <h1>Add new book</h1>
+        <p>Book title:</p>
+        <input type="text" id="input-title">
+        <p>Author:</p>
+        <input type="text" id="input-author">
+        <p>Number of pages:</p>
+        <input type="text" id="input-pages">
+        <input type="checkbox" id="input-read">
+        <label for="input-read">Book was read</label>
+        <button id="add-new-book">Add</button>
+        <button id="cancel">Cancel</button>
+    </div>
+
     <footer>
         <p>Made by: Zach Dodds</p>
     </footer>
