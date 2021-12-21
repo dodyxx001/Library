@@ -23,3 +23,8 @@ Version 1:
   book" button.
 - Library now accepts new books, and we can delete existing ones
 - Took about 4 hours to complete.
+
+Version 2:
+- Edited CSS, made it look nicer
+- Added functionality to "read" button
+- This version took about 2 hours to complete
