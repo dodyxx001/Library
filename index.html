@@ -10,7 +10,7 @@
 <body>
     <header>
         <h1>Library</h1>
-        <button id="add-button">Add Book</button>
+        <button id="add-button">＋<br>Add Book</button>
     </header>
 
 
@@ -24,10 +24,14 @@
         <input type="text" id="input-author">
         <p>Number of pages:</p>
         <input type="text" id="input-pages">
-        <input type="checkbox" id="input-read">
-        <label for="input-read">Book was read</label>
-        <button id="add-new-book">Add</button>
-        <button id="cancel">Cancel</button>
+        <div id="checkbox-read">
+            <input type="checkbox" id="input-read">
+            <label for="input-read">Book was read</label>
+        </div>
+        <div id="input-form-buttons">
+            <button id="add-new-book">Add</button>
+            <button id="cancel">Cancel</button>
+        </div>
     </div>
 
     <footer>

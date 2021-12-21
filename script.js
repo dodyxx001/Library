@@ -40,8 +40,7 @@ let showBooks = () => {
         newBook.classList.add('book'); 
         newBook.setAttribute('data-index', `${myLibrary.indexOf(ele)}`); // Numbering the new book
         newBook.innerHTML += `<div class="info title">  
-                                    <p>Title:</p>
-                                    <p>${ele.title}</p>
+                                    <h1>${ele.title}</h1>
                                 </div>
                                 <div class="info author">
                                     <p>Author:</p>
@@ -51,10 +50,8 @@ let showBooks = () => {
                                     <p>Pages:</p>
                                     <p id="pages">${ele.pages}</p>
                                 </div>
-                                <div class="read">
+                                <div class="read-and-remove">
                                     <button class="read-button">${ele.read}</button>
-                                </div>
-                                <div class="remove">
                                     <button class="remove-button">Remove Book</button>
                                 </div>`
         content.appendChild(newBook);
@@ -66,11 +63,20 @@ let showBooks = () => {
 let readButtonFunctionality = () => {
     let readButtons = Array.from(document.getElementsByClassName('read-button'));
     readButtons.forEach((btn) => {
+
+        if (btn.textContent === 'Not read yet'){
+            btn.classList.add('not-read');
+        };
+        
         btn.addEventListener('click', (e) => {
             if (e.target.textContent === 'Read'){
                 e.target.textContent = 'Not read yet';
+                e.target.classList.add('not-read');
             } else {
                 e.target.textContent = 'Read';
+                if (e.target.classList.contains('not-read')){
+                    e.target.classList.remove('not-read');
+                };
             };
         });
     });
